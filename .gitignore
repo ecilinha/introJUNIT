@@ -1,10 +1,4 @@
 .settings/org.eclipse.core.resources.prefs
 .settings/org.eclipse.jdt.apt.core.prefs
 .settings/org.eclipse.jdt.core.prefs
-target/test-classes/com/everis/calculadorasimples/*.class
-target/test-classes/com/everis/calculadorasimples/CalculadoraTest.class
-target/surefire-reports/TEST-com.everis.calculadorasimples.CalculadoraTest.xml
-target/surefire-reports/com.everis.calculadorasimples.CalculadoraTest.txt
-target/surefire-reports/com.everis.calculadorasimples.CalculadoraTest.txt
-target/surefire-reports/TEST-com.everis.calculadorasimples.CalculadoraTest.xml
-target/test-classes/com/everis/calculadorasimples/CalculadoraTest.class
+*/target/**
