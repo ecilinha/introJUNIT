@@ -7,7 +7,7 @@ package com.everis.calculadorasimples;
  * framework de testes básico.
  * 
  * Observem que não estamos nem perto de ter uma cobertura de testes adequada 
- * com estes testes abaixo. O nosso objetico aqui é ilustrar a abordagem. 
+ * com estes testes abaixo. O nosso objetivo aqui é ilustrar a abordagem. 
  */
 
 public class TesteIngenuoCalculadora {
