@@ -1,11 +1,15 @@
 package com.everis.calculadorasimples;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.fail;
 
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.*;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -19,13 +23,14 @@ import org.junit.jupiter.params.provider.CsvSource;
  * com estes testes abaixo. O nosso objetivo aqui é ilustrar a abordagem.
  */
 public class CalculadoraTest {
+    static Calculadora calculadora;
 
     @Test
     public void testaSomaMenosIngenuo() {
         Calculadora myCalc = new Calculadora();
 
         boolean temErro = false;
-        if (myCalc.soma(2, 3) != 4) {
+        if (myCalc.soma(2, 2) != 4) {
             temErro = true;
         }
         if (myCalc.soma(2, -2) != 0) {
@@ -41,37 +46,43 @@ public class CalculadoraTest {
             temErro = true;
         }
         if (temErro) {
-            fail("\n\n## Houve um erro na validação da soma ##\n\n");
+            fail("Houve um erro na validação da soma.");
         }
     }
 
-/*
-
-    static Calculadora calculadora;
 
     @Test
     public void deveResultarQuatroAoSomarDoisEDois() {
+        //Calculadora calculadora = new Calculadora();
         assertEquals(4.0, calculadora.soma(2, 2));
     }
 
     @Test
     public void deveResultarZeroAoSomarDoisEMenosDois() {
-        assertEquals(0.0, calculadora.soma(2, -2));
+        //Calculadora calculadora = new Calculadora();
+        assertEquals(0.0, calculadora.soma(3, -2));
     }
 
-    @DisplayName("Valida múltiplas somas com informações em CSV")
-    @ParameterizedTest
-    @CsvSource({ "1.0, 1.0, 2.0", "2.0, 3.0, 5.0" })
-    void validaMultiplasSomasCSV(double parcela1, double parcela2, double resultadoEsperado) {
-        assertEquals(resultadoEsperado, calculadora.soma(parcela1, parcela2));
+    @BeforeAll
+    public static void setup() {
+        calculadora = new Calculadora();
     }
 
-    @DisplayName("Valida múltiplas somas com informações em arquivo CSV")
-    @ParameterizedTest
-    @CsvFileSource(resources = "/data.csv", numLinesToSkip = 1)
-    void validaMultiplasSomasArqCSV(double parcela1, double parcela2, double resultadoEsperado) {
-        assertEquals(resultadoEsperado, calculadora.soma(parcela1, parcela2));
-    }
+    // Outros: @BeforeEach, @AfterEach, @AfterAll
 
-    */
+
+    // @DisplayName("Valida múltiplas somas com informações em CSV")
+    // @ParameterizedTest
+    // @CsvSource({ "1.0, 1.0, 2.0", "2.0, 3.0, 5.0" })
+    // void validaMultiplasSomasCSV(double parcela1, double parcela2, double resultadoEsperado) {
+    //     assertEquals(resultadoEsperado, calculadora.soma(parcela1, parcela2));
+    // }
+
+    // @DisplayName("Valida múltiplas somas com informações em arquivo CSV")
+    // @ParameterizedTest
+    // @CsvFileSource(resources = "/data.csv", numLinesToSkip = 1)
+    // void validaMultiplasSomasArqCSV(double parcela1, double parcela2, double resultadoEsperado) {
+    //     assertEquals(resultadoEsperado, calculadora.soma(parcela1, parcela2));
+    // }
+
 }
