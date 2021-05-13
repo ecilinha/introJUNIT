@@ -19,7 +19,8 @@ import org.junit.jupiter.params.provider.CsvSource;
  * Testes unitários para a classe Calculadora da package calculadorasimples
  * 
  * Observem que não estamos nem perto de ter uma cobertura de testes adequada
- * com estes testes abaixo. O nosso objetivo aqui é ilustrar a abordagem.
+ * com estes exemplos abaixo. O nosso objetivo aqui é ilustrar a utilização 
+ * do JUnit, u buscamos fazer os testes suficientes para isto. 
  */
 public class CalculadoraTest {
     static Calculadora calculadora;
