@@ -1,4 +1,5 @@
 # introJUnit
-## Introdução à gestão do ciclo de vida de testes com JUnit. Utilizamos a versão 5 do framework para este exemplo.
+## Introdução à utilização do JUnit para o desenvolvimento de testes. 
+## Utilizamos a versão 5 do framework para este exemplo.
 
   
