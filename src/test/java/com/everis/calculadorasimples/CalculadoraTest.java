@@ -20,7 +20,7 @@ import org.junit.jupiter.params.provider.CsvSource;
  * 
  * Observem que não estamos nem perto de ter uma cobertura de testes adequada
  * com estes exemplos abaixo. O nosso objetivo aqui é ilustrar a utilização do
- * JUnit, u buscamos fazer os testes suficientes para isto.
+ * JUnit, e buscamos fazer os testes suficientes para isto.
  */
 public class CalculadoraTest {
     static Calculadora calculadora;
