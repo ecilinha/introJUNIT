@@ -26,4 +26,9 @@ public class Calculadora
     {
         return dividendo / divisor;
     }
+    
+    public int restoDivisaoInteira(int dividendo, int divisor)
+    {
+    	return dividendo % divisor;
+    }
 }
