@@ -13,3 +13,4 @@ target/surefire-reports/TEST-com.everis.calculadorasimples.CalculadoraTest.xml
 target/test-classes/data.csv
 target/test-classes/com/everis/calculadorasimples/CalculadoraTest.class
 
+/target/
