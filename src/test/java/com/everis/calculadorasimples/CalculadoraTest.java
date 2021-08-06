@@ -20,7 +20,7 @@ import org.junit.jupiter.params.provider.CsvSource;
  * 
  * Observem que não estamos nem perto de ter uma cobertura de testes adequada
  * com estes exemplos abaixo. O nosso objetivo aqui é ilustrar a utilização do
- * JUnit, u buscamos fazer os testes suficientes para isto.
+ * JUnit, e buscamos fazer os testes suficientes para isto.
  */
 public class CalculadoraTest {
     static Calculadora calculadora;
@@ -70,7 +70,7 @@ public class CalculadoraTest {
 
     @DisplayName("Valida múltiplas somas com informações em CSV")
     @ParameterizedTest
-    @CsvSource({ "1.0, 1.0, 2.0", "2.0, 3.0, 5.0" })
+    @CsvSource({ "1.0, 1.0, 2.0", "2.0, 3.0, 6.0" })
     void validaMultiplasSomasCSV(double parcela1, double parcela2, double resultadoEsperado) {
         assertEquals(resultadoEsperado, calculadora.soma(parcela1, parcela2));
     }
@@ -83,10 +83,10 @@ public class CalculadoraTest {
     }
 
     @Test
-    public void testaExcecao() {
+    public void divisaoPorZeroGeraExcecao() {
         assertThrows(ArithmeticException.class, () -> {
-            int retorno = 4 / 0;
-            System.out.println(retorno);
+        	int resultado = calculadora.restoDivisaoInteira(4, 0);
+            System.out.println(resultado);
         });
     }
 
